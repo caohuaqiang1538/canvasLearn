@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        canvas{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500">您的浏览器暂不支持canvas功能</canvas>
+</body>
+<script>
+    var canvas = $("#myCanvas");
+    var context  = canvas.get(0).getContext('2d');
+    context.translate(200,200); //平移到正方形中心
+context.rotate(0.7854); //旋转45度(Math.PI/4)
+context.fillRect(-50,-50,100,100); //以旋转点为中心绘制一个正方形
+
+</script>
+</html>
